@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>7.3</LangVersion>
+    <RootNamespace>InterfaceTeste</RootNamespace>
+    <AssemblyName>InterfaceTeste</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>image\Gestao.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Telecon.Genericos">
+      <HintPath>lib\Telecon.Genericos.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Telecon.GestaoComercial.Biblioteca">
+      <HintPath>lib\Telecon.GestaoComercial.Biblioteca.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Scripts\*.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="image\Gestao.ico" LogicalName="InterfaceTeste.Gestao.ico" />
+  </ItemGroup>
+
+</Project>
